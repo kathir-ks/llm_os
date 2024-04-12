@@ -1,2 +1,1 @@
-# LLM_OS
-an experiment to simulate an os using language models.
+### An experiment to simulate OS using LLM Agents
