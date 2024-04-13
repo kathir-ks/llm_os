@@ -1,4 +1,5 @@
 from terminal import Terminal
+from llm import llm_config, llm
 
 class Agent():
 
@@ -6,7 +7,7 @@ class Agent():
     The Agent class is the base class for all the agents
     '''
 
-    def __init__(self, config):
+    def __init__(self, config: llm_config):
 
         self.name = config.name
         self.role = config.role
@@ -18,8 +19,10 @@ class Agent():
     
     def task(self, task):
         
-        steps = llm.generate(self.instrution_prompt + f"Generate step by step task for the given task below. ###Task: {task}")
+        steps = llm.generate(self.instrution_prompt +
+                              f"Generate step by step task for the given 
+                              task below.Give the steps as a python nested list. ###Task: {task}")
 
         for step in steps:
-            pass
+            print(steps)
             

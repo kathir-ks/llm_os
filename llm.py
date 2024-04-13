@@ -21,7 +21,7 @@ class llm():
         self.config = config
         self.model_name = config.model_name
         self.open_source = config.open_source
-        __init__llm__(self, config)
+        self.__init__llm__(self, config)
 
     def __init__llm__(self, config : llm_config):
         
